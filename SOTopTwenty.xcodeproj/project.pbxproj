@@ -16,6 +16,11 @@
 		F061304B23F4C54200DD39B3 /* SOTopTwentyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F061303B23F4C54100DD39B3 /* SOTopTwentyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F061304E23F4C54200DD39B3 /* SOTopTwentyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; };
 		F061304F23F4C54200DD39B3 /* SOTopTwentyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F061306423F5AAC700DD39B3 /* SOTopTwenty_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */; };
+		F061306B23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061306A23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift */; };
+		F061306D23F5AAC700DD39B3 /* SOTopTwenty_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F061305D23F5AAC600DD39B3 /* SOTopTwenty_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F061307023F5AAC700DD39B3 /* SOTopTwenty_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */; };
+		F061307123F5AAC700DD39B3 /* SOTopTwenty_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,27 @@
 			remoteGlobalIDString = F061303823F4C54100DD39B3;
 			remoteInfo = SOTopTwentyKit;
 		};
+		F061306523F5AAC700DD39B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F061300323F4C37100DD39B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F061305A23F5AAC600DD39B3;
+			remoteInfo = SOTopTwenty_iOS;
+		};
+		F061306723F5AAC700DD39B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F061300323F4C37100DD39B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F061300A23F4C37100DD39B3;
+			remoteInfo = SOTopTwenty;
+		};
+		F061306E23F5AAC700DD39B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F061300323F4C37100DD39B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F061305A23F5AAC600DD39B3;
+			remoteInfo = SOTopTwenty_iOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +76,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F061304F23F4C54200DD39B3 /* SOTopTwentyKit.framework in Embed Frameworks */,
+				F061307123F5AAC700DD39B3 /* SOTopTwenty_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +96,12 @@
 		F061304123F4C54200DD39B3 /* SOTopTwentyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOTopTwentyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061304823F4C54200DD39B3 /* SOTopTwentyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOTopTwentyKitTests.swift; sourceTree = "<group>"; };
 		F061304A23F4C54200DD39B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOTopTwenty_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F061305D23F5AAC600DD39B3 /* SOTopTwenty_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOTopTwenty_iOS.h; sourceTree = "<group>"; };
+		F061305E23F5AAC600DD39B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F061306323F5AAC700DD39B3 /* SOTopTwenty_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOTopTwenty_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F061306A23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOTopTwenty_iOSTests.swift; sourceTree = "<group>"; };
+		F061306C23F5AAC700DD39B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F061304E23F4C54200DD39B3 /* SOTopTwentyKit.framework in Frameworks */,
+				F061307023F5AAC700DD39B3 /* SOTopTwenty_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +129,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F061305823F5AAC600DD39B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F061306023F5AAC700DD39B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F061306423F5AAC700DD39B3 /* SOTopTwenty_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				F061300D23F4C37100DD39B3 /* SOTopTwenty */,
+				F061305C23F5AAC600DD39B3 /* SOTopTwenty_iOS */,
+				F061306923F5AAC700DD39B3 /* SOTopTwenty_iOSTests */,
 				F061303A23F4C54100DD39B3 /* SOTopTwentyKit */,
 				F061304723F4C54200DD39B3 /* SOTopTwentyKitTests */,
 				F061300C23F4C37100DD39B3 /* Products */,
@@ -114,6 +165,8 @@
 				F061300B23F4C37100DD39B3 /* SOTopTwenty.app */,
 				F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */,
 				F061304123F4C54200DD39B3 /* SOTopTwentyKitTests.xctest */,
+				F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */,
+				F061306323F5AAC700DD39B3 /* SOTopTwenty_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +201,24 @@
 			path = SOTopTwentyKitTests;
 			sourceTree = "<group>";
 		};
+		F061305C23F5AAC600DD39B3 /* SOTopTwenty_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F061305D23F5AAC600DD39B3 /* SOTopTwenty_iOS.h */,
+				F061305E23F5AAC600DD39B3 /* Info.plist */,
+			);
+			path = SOTopTwenty_iOS;
+			sourceTree = "<group>";
+		};
+		F061306923F5AAC700DD39B3 /* SOTopTwenty_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F061306A23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift */,
+				F061306C23F5AAC700DD39B3 /* Info.plist */,
+			);
+			path = SOTopTwenty_iOSTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -156,6 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F061304B23F4C54200DD39B3 /* SOTopTwentyKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F061305623F5AAC600DD39B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F061306D23F5AAC700DD39B3 /* SOTopTwenty_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +254,7 @@
 			);
 			dependencies = (
 				F061304D23F4C54200DD39B3 /* PBXTargetDependency */,
+				F061306F23F5AAC700DD39B3 /* PBXTargetDependency */,
 			);
 			name = SOTopTwenty;
 			productName = SOTopTwenty;
@@ -218,6 +298,43 @@
 			productReference = F061304123F4C54200DD39B3 /* SOTopTwentyKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F061305A23F5AAC600DD39B3 /* SOTopTwenty_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F061307223F5AAC700DD39B3 /* Build configuration list for PBXNativeTarget "SOTopTwenty_iOS" */;
+			buildPhases = (
+				F061305623F5AAC600DD39B3 /* Headers */,
+				F061305723F5AAC600DD39B3 /* Sources */,
+				F061305823F5AAC600DD39B3 /* Frameworks */,
+				F061305923F5AAC600DD39B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOTopTwenty_iOS;
+			productName = SOTopTwenty_iOS;
+			productReference = F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F061306223F5AAC700DD39B3 /* SOTopTwenty_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F061307523F5AAC700DD39B3 /* Build configuration list for PBXNativeTarget "SOTopTwenty_iOSTests" */;
+			buildPhases = (
+				F061305F23F5AAC700DD39B3 /* Sources */,
+				F061306023F5AAC700DD39B3 /* Frameworks */,
+				F061306123F5AAC700DD39B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F061306623F5AAC700DD39B3 /* PBXTargetDependency */,
+				F061306823F5AAC700DD39B3 /* PBXTargetDependency */,
+			);
+			name = SOTopTwenty_iOSTests;
+			productName = SOTopTwenty_iOSTests;
+			productReference = F061306323F5AAC700DD39B3 /* SOTopTwenty_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +352,13 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					F061304023F4C54200DD39B3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F061300A23F4C37100DD39B3;
+					};
+					F061305A23F5AAC600DD39B3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F061306223F5AAC700DD39B3 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = F061300A23F4C37100DD39B3;
 					};
@@ -256,6 +380,8 @@
 				F061300A23F4C37100DD39B3 /* SOTopTwenty */,
 				F061303823F4C54100DD39B3 /* SOTopTwentyKit */,
 				F061304023F4C54200DD39B3 /* SOTopTwentyKitTests */,
+				F061305A23F5AAC600DD39B3 /* SOTopTwenty_iOS */,
+				F061306223F5AAC700DD39B3 /* SOTopTwenty_iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,6 +404,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F061303F23F4C54200DD39B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F061305923F5AAC600DD39B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F061306123F5AAC700DD39B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,6 +451,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F061305723F5AAC600DD39B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F061305F23F5AAC700DD39B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F061306B23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -328,6 +483,21 @@
 			isa = PBXTargetDependency;
 			target = F061303823F4C54100DD39B3 /* SOTopTwentyKit */;
 			targetProxy = F061304C23F4C54200DD39B3 /* PBXContainerItemProxy */;
+		};
+		F061306623F5AAC700DD39B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F061305A23F5AAC600DD39B3 /* SOTopTwenty_iOS */;
+			targetProxy = F061306523F5AAC700DD39B3 /* PBXContainerItemProxy */;
+		};
+		F061306823F5AAC700DD39B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F061300A23F4C37100DD39B3 /* SOTopTwenty */;
+			targetProxy = F061306723F5AAC700DD39B3 /* PBXContainerItemProxy */;
+		};
+		F061306F23F5AAC700DD39B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F061305A23F5AAC600DD39B3 /* SOTopTwenty_iOS */;
+			targetProxy = F061306E23F5AAC700DD39B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -587,6 +757,100 @@
 			};
 			name = Release;
 		};
+		F061307323F5AAC700DD39B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X7ERH955JW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SOTopTwenty_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ironworksMediaLimited.SOTopTwenty-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F061307423F5AAC700DD39B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X7ERH955JW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SOTopTwenty_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ironworksMediaLimited.SOTopTwenty-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F061307623F5AAC700DD39B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7ERH955JW;
+				INFOPLIST_FILE = SOTopTwenty_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ironworksMediaLimited.SOTopTwenty-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOTopTwenty.app/SOTopTwenty";
+			};
+			name = Debug;
+		};
+		F061307723F5AAC700DD39B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7ERH955JW;
+				INFOPLIST_FILE = SOTopTwenty_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ironworksMediaLimited.SOTopTwenty-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOTopTwenty.app/SOTopTwenty";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -622,6 +886,24 @@
 			buildConfigurations = (
 				F061305423F4C54200DD39B3 /* Debug */,
 				F061305523F4C54200DD39B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F061307223F5AAC700DD39B3 /* Build configuration list for PBXNativeTarget "SOTopTwenty_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F061307323F5AAC700DD39B3 /* Debug */,
+				F061307423F5AAC700DD39B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F061307523F5AAC700DD39B3 /* Build configuration list for PBXNativeTarget "SOTopTwenty_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F061307623F5AAC700DD39B3 /* Debug */,
+				F061307723F5AAC700DD39B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,15 +1,15 @@
 //
-//  SOTopTwentyKitTests.swift
-//  SOTopTwentyKitTests
+//  SOTopTwenty_iOSTests.swift
+//  SOTopTwenty_iOSTests
 //
-//  Created by Trevor Doodes on 12/02/2020.
+//  Created by Trevor Doodes on 13/02/2020.
 //  Copyright © 2020 IronworksMediaLimited. All rights reserved.
 //
 
 import XCTest
-@testable import SOTopTwentyKit
+@testable import SOTopTwenty_iOS
 
-class SOTopTwentyKitTests: XCTestCase {
+class SOTopTwenty_iOSTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
