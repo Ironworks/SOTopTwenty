@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SOTopTwenty_iOS
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    private let injectionContainer = SOTopTwentyAppDependencyContainer()
     var window: UIWindow?
 
 
@@ -21,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let viewController = UIViewController()
-        window?.rootViewController = viewController
+        let navController = injectionContainer.createMainNavigationContoller()
+        window?.rootViewController = navController.viewControllers[0]
         window?.makeKeyAndVisible()
     }
 
