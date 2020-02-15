@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0324F0523F82EA700AFA2CB /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F0423F82EA700AFA2CB /* Data+JSONFile.swift */; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
@@ -116,6 +117,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F0324F0423F82EA700AFA2CB /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
 		F061300B23F4C37100DD39B3 /* SOTopTwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOTopTwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061300E23F4C37100DD39B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F061301023F4C37100DD39B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0324F0223F82E2900AFA2CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F0324F0323F82E7800AFA2CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F0423F82EA700AFA2CB /* Data+JSONFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F061300223F4C37100DD39B3 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +277,8 @@
 			children = (
 				F061304823F4C54200DD39B3 /* SOTopTwentyKitTests.swift */,
 				F061304A23F4C54200DD39B3 /* Info.plist */,
+				F0324F0223F82E2900AFA2CB /* Networking */,
+				F0324F0323F82E7800AFA2CB /* Extensions */,
 			);
 			path = SOTopTwentyKitTests;
 			sourceTree = "<group>";
@@ -621,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F061304923F4C54200DD39B3 /* SOTopTwentyKitTests.swift in Sources */,
+				F0324F0523F82EA700AFA2CB /* Data+JSONFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
