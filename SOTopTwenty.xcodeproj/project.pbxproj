@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F0324F0523F82EA700AFA2CB /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F0423F82EA700AFA2CB /* Data+JSONFile.swift */; };
+		F0324F0723F82F3A00AFA2CB /* StackOverflowClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F0623F82F3A00AFA2CB /* StackOverflowClientTests.swift */; };
+		F0324F0A23F8305100AFA2CB /* StackOverflowClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F0923F8305100AFA2CB /* StackOverflowClient.swift */; };
+		F0324F0D23F8328600AFA2CB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F0C23F8328600AFA2CB /* Users.swift */; };
+		F0324F1023F8336400AFA2CB /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F0F23F8336400AFA2CB /* UserTests.swift */; };
+		F0324F1423F8367200AFA2CB /* DecodableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F1223F8358D00AFA2CB /* DecodableTestCase.swift */; };
+		F0324F1723F83D5000AFA2CB /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = F0324F1623F83D5000AFA2CB /* User.json */; };
+		F0324F1A23F83FAE00AFA2CB /* XCTAssertEqualToAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F1923F83FAE00AFA2CB /* XCTAssertEqualToAny.swift */; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
@@ -118,6 +125,13 @@
 
 /* Begin PBXFileReference section */
 		F0324F0423F82EA700AFA2CB /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
+		F0324F0623F82F3A00AFA2CB /* StackOverflowClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowClientTests.swift; sourceTree = "<group>"; };
+		F0324F0923F8305100AFA2CB /* StackOverflowClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowClient.swift; sourceTree = "<group>"; };
+		F0324F0C23F8328600AFA2CB /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		F0324F0F23F8336400AFA2CB /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		F0324F1223F8358D00AFA2CB /* DecodableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableTestCase.swift; sourceTree = "<group>"; };
+		F0324F1623F83D5000AFA2CB /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		F0324F1923F83FAE00AFA2CB /* XCTAssertEqualToAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTAssertEqualToAny.swift; sourceTree = "<group>"; };
 		F061300B23F4C37100DD39B3 /* SOTopTwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOTopTwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061300E23F4C37100DD39B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F061301023F4C37100DD39B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +225,7 @@
 		F0324F0223F82E2900AFA2CB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F0324F0623F82F3A00AFA2CB /* StackOverflowClientTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -221,6 +236,54 @@
 				F0324F0423F82EA700AFA2CB /* Data+JSONFile.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0324F0823F8303600AFA2CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F0923F8305100AFA2CB /* StackOverflowClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F0324F0B23F8325F00AFA2CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F0C23F8328600AFA2CB /* Users.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0324F0E23F8334100AFA2CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F0F23F8336400AFA2CB /* UserTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0324F1123F8355F00AFA2CB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F1223F8358D00AFA2CB /* DecodableTestCase.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F0324F1523F83CF200AFA2CB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F1623F83D5000AFA2CB /* User.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F0324F1823F83F7E00AFA2CB /* XCTest Additions */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F1923F83FAE00AFA2CB /* XCTAssertEqualToAny.swift */,
+			);
+			path = "XCTest Additions";
 			sourceTree = "<group>";
 		};
 		F061300223F4C37100DD39B3 = {
@@ -268,6 +331,8 @@
 			children = (
 				F061303B23F4C54100DD39B3 /* SOTopTwentyKit.h */,
 				F061303C23F4C54100DD39B3 /* Info.plist */,
+				F0324F0823F8303600AFA2CB /* Networking */,
+				F0324F0B23F8325F00AFA2CB /* Models */,
 			);
 			path = SOTopTwentyKit;
 			sourceTree = "<group>";
@@ -278,7 +343,11 @@
 				F061304823F4C54200DD39B3 /* SOTopTwentyKitTests.swift */,
 				F061304A23F4C54200DD39B3 /* Info.plist */,
 				F0324F0223F82E2900AFA2CB /* Networking */,
+				F0324F0E23F8334100AFA2CB /* Models */,
+				F0324F1123F8355F00AFA2CB /* Utilities */,
 				F0324F0323F82E7800AFA2CB /* Extensions */,
+				F0324F1523F83CF200AFA2CB /* Data */,
+				F0324F1823F83F7E00AFA2CB /* XCTest Additions */,
 			);
 			path = SOTopTwentyKitTests;
 			sourceTree = "<group>";
@@ -517,6 +586,7 @@
 					};
 					F061303823F4C54100DD39B3 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					F061304023F4C54200DD39B3 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -585,6 +655,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0324F1723F83D5000AFA2CB /* User.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +703,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0324F0D23F8328600AFA2CB /* Users.swift in Sources */,
+				F0324F0A23F8305100AFA2CB /* StackOverflowClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +712,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0324F1023F8336400AFA2CB /* UserTests.swift in Sources */,
+				F0324F1A23F83FAE00AFA2CB /* XCTAssertEqualToAny.swift in Sources */,
+				F0324F1423F8367200AFA2CB /* DecodableTestCase.swift in Sources */,
+				F0324F0723F82F3A00AFA2CB /* StackOverflowClientTests.swift in Sources */,
 				F061304923F4C54200DD39B3 /* SOTopTwentyKitTests.swift in Sources */,
 				F0324F0523F82EA700AFA2CB /* Data+JSONFile.swift in Sources */,
 			);
@@ -896,6 +973,7 @@
 		F061305123F4C54200DD39B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -913,6 +991,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.SOTopTwentyKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -923,6 +1002,7 @@
 		F061305223F4C54200DD39B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
