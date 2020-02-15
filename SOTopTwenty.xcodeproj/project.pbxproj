@@ -20,6 +20,7 @@
 		F0324F2023F84B7600AFA2CB /* Items.json in Resources */ = {isa = PBXBuildFile; fileRef = F0324F1F23F84B7600AFA2CB /* Items.json */; };
 		F0324F2223F84F0900AFA2CB /* SOTopTwentyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061308F23F5BE3A00DD39B3 /* SOTopTwentyUIKit.framework */; };
 		F0324F2323F84F0900AFA2CB /* SOTopTwentyUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F061308F23F5BE3A00DD39B3 /* SOTopTwentyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0324F2723F8632F00AFA2CB /* GetUsersMissingValuesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = F0324F2623F8632F00AFA2CB /* GetUsersMissingValuesResponse.json */; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
@@ -138,6 +139,7 @@
 		F0324F1B23F8453100AFA2CB /* ItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTests.swift; sourceTree = "<group>"; };
 		F0324F1D23F8459D00AFA2CB /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		F0324F1F23F84B7600AFA2CB /* Items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Items.json; sourceTree = "<group>"; };
+		F0324F2623F8632F00AFA2CB /* GetUsersMissingValuesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetUsersMissingValuesResponse.json; sourceTree = "<group>"; };
 		F061300B23F4C37100DD39B3 /* SOTopTwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOTopTwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061300E23F4C37100DD39B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F061301023F4C37100DD39B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				F0324F1623F83D5000AFA2CB /* User.json */,
 				F0324F1F23F84B7600AFA2CB /* Items.json */,
+				F0324F2623F8632F00AFA2CB /* GetUsersMissingValuesResponse.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 			files = (
 				F0324F2023F84B7600AFA2CB /* Items.json in Resources */,
 				F0324F1723F83D5000AFA2CB /* User.json in Resources */,
+				F0324F2723F8632F00AFA2CB /* GetUsersMissingValuesResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
