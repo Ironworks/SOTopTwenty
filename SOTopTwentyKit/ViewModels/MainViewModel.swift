@@ -8,13 +8,22 @@
 
 import Foundation
 
-public class MainViewModel {
-    let networkService: StackOverflowService
+public protocol MainViewModelProtocol : class {
+    
+    var networkService: StackOverflowService { get set  }
+    var users: Dynamic<[CellViewModel]> { get set }
+    var error: Dynamic<Error> { get set }
+    init(service: StackOverflowService)
+    func retrieveUsers()
+}
+
+public class MainViewModel: MainViewModelProtocol {
+    public var networkService: StackOverflowService
     public var users: Dynamic<[CellViewModel]> = Dynamic([CellViewModel]())
     public var error: Dynamic<Error> = Dynamic(NSError())
     
     
-    public init(service: StackOverflowService) {
+    required public init(service: StackOverflowService) {
         self.networkService = service
     }
     
