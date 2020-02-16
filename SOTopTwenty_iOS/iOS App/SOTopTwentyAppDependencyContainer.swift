@@ -11,12 +11,16 @@ import UIKit
 
 public class SOTopTwentyAppDependencyContainer {
     
+    let service = StackOverflowClient.shared
+    
     public init() {}
     
+    public func createMainViewModel() -> MainViewModel {
+        return MainViewModel(service: service)
+    }
+    
     public func createMainNavigationContoller() -> UINavigationController {
-        let service = StackOverflowClient.shared
-        let viewModel = MainViewModel(service: service)
-        let mainViewController =  MainViewController(viewModel: viewModel)
+        let mainViewController =  MainViewController(viewModel: createMainViewModel())
         let navigationController = UINavigationController(rootViewController: mainViewController)
         
         return navigationController
