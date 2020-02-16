@@ -8,23 +8,23 @@
 
 import Foundation
 
-class CellViewModel {
+public class CellViewModel {
         
     var userName: Dynamic<String> = Dynamic("")
     var reputation: Dynamic<Int> = Dynamic(0)
     var isFollowing: Dynamic<Bool> = Dynamic(false)
     var isBlocked: Dynamic<Bool> = Dynamic(false)
     
-    init(user: User) {
+    public init(user: User) {
         self.userName.value = user.userName
         self.reputation.value = user.reputation
     }
     
-    func toggleIsFollowing() {
+    public func toggleIsFollowing() {
         isFollowing.value = !isFollowing.value
     }
     
-    func toggleIsBlocked() {
+    public func toggleIsBlocked() {
         isBlocked.value = !isBlocked.value
     }
     

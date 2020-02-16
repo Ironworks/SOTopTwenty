@@ -8,17 +8,17 @@
 
 import Foundation
 
-class MainViewModel {
+public class MainViewModel {
     let networkService: StackOverflowService
-    var users: Dynamic<[CellViewModel]> = Dynamic([CellViewModel]())
-    var error: Dynamic<Error> = Dynamic(NSError())
+    public var users: Dynamic<[CellViewModel]> = Dynamic([CellViewModel]())
+    public var error: Dynamic<Error> = Dynamic(NSError())
     
     
-    init(service: StackOverflowService) {
+    public init(service: StackOverflowService) {
         self.networkService = service
     }
     
-    func retrieveUsers() {
+    public func retrieveUsers() {
         _ = networkService.getUsers { [weak self] items, error in
             
             guard let self = self else { return }

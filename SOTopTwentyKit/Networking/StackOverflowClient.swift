@@ -6,28 +6,28 @@
 //  Copyright © 2020 IronworksMediaLimited. All rights reserved.
 //
 
-protocol StackOverflowService {
+public protocol StackOverflowService {
     func getUsers(completion: @escaping (Items?, Error?) -> Void) -> URLSessionDataTask
 }
 import Foundation
 
-class StackOverflowClient: StackOverflowService {
+public class StackOverflowClient: StackOverflowService {
       let baseURL: URL
       let session: URLSession
       let responseQueue: DispatchQueue?
       
       
-      static let shared = StackOverflowClient(baseURL: URL(string: "https://api.stackexchange.com/2.2/")!,
+      public static let shared = StackOverflowClient(baseURL: URL(string: "https://api.stackexchange.com/2.2/")!,
                                          session: URLSession.shared,
                                          responseQueue: .main)
       
-      init(baseURL: URL, session: URLSession, responseQueue: DispatchQueue?) {
+      public init(baseURL: URL, session: URLSession, responseQueue: DispatchQueue?) {
         self.baseURL = baseURL
         self.session = session
         self.responseQueue = responseQueue
       }
       
-      func getUsers(completion: @escaping (Items?, Error?) -> Void) -> URLSessionDataTask {
+      public func getUsers(completion: @escaping (Items?, Error?) -> Void) -> URLSessionDataTask {
         let url = URL(string: "users?pagesize=20&order=desc&sort=reputation&site=stackoverflow", relativeTo: baseURL)!
         
         let task = session.dataTask(with: url) { [weak self] data, response, error in

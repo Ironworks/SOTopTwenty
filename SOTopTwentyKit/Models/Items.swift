@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Items: Decodable, Equatable {
+public struct Items: Decodable, Equatable {
     let items: [User]
 }

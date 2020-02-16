@@ -115,7 +115,7 @@ class MockStackOverflowClient: StackOverflowService {
 
 class MockViewController {
     var viewModel: MainViewModel
-    var users: [User]?
+    var users: [CellViewModel]?
     var error: Error?
     var bindsToUser = false
     var bindsToError = false

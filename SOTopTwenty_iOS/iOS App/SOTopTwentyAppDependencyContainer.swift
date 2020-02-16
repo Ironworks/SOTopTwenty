@@ -14,7 +14,9 @@ public class SOTopTwentyAppDependencyContainer {
     public init() {}
     
     public func createMainNavigationContoller() -> UINavigationController {
-        let mainViewController =  MainViewController() 
+        let service = StackOverflowClient.shared
+        let viewModel = MainViewModel(service: service)
+        let mainViewController =  MainViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: mainViewController)
         
         return navigationController

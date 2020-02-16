@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: Decodable {
+public class User: Decodable {
     let profileImage: String
     let userName: String
     let reputation: Int
@@ -27,7 +27,7 @@ class User: Decodable {
 }
 
 extension User: Equatable {
-    static func == (lhs: User, rhs: User) -> Bool {
+    public static func == (lhs: User, rhs: User) -> Bool {
         return lhs.profileImage == rhs.profileImage &&
             lhs.userName == rhs.userName &&
             lhs.reputation == rhs.reputation

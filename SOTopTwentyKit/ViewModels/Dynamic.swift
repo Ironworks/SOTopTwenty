@@ -8,25 +8,25 @@
 
 import Foundation
 
-class Dynamic<T> {
-    typealias Listener = (T) -> Void
-    var listener: Listener?
-    var value: T {
+public class Dynamic<T> {
+    public typealias Listener = (T) -> Void
+    public var listener: Listener?
+    public var value: T {
         didSet {
             listener?(value)
         }
     }
     
-    func bind(listener: Listener?) {
+    public func bind(listener: Listener?) {
         self.listener = listener
     }
     
-    func bindAndFire(listener: Listener?) {
+    public func bindAndFire(listener: Listener?) {
         self.listener = listener
         listener?(value)
     }
     
-    init(_ v: T) {
+    public init(_ v: T) {
         value = v 
     }
 }
