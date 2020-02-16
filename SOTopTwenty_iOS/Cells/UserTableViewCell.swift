@@ -24,7 +24,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var blockButton: UIButton!
     @IBOutlet weak var greyView: UIView!
     
-    private var viewModel: CellViewModel?
+    private weak var viewModel: CellViewModel?
     
     weak var delegate: UserTableViewCellDelegate?
     
@@ -42,6 +42,9 @@ class UserTableViewCell: UITableViewCell {
         userNameLabel.text = viewModel.userName.value
         reputationLabel.text = "\(viewModel.reputation.value)"
         favouriteImageView.image = viewModel.isFollowing.value ? UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
+        showHideButtons(show: viewModel.isExpanded.value)
+        setFollowButton(isFollowed: viewModel.isFollowing.value)
+        
         if viewModel.isBlocked.value {
             self.disableCell()
         }
@@ -52,9 +55,6 @@ class UserTableViewCell: UITableViewCell {
     private func setupButtons() {
         followButton.addTarget(self, action: #selector(followButtonPressed), for: .touchUpInside)
         blockButton.addTarget(self, action: #selector(blockButtonPressed), for: .touchUpInside)
-        if let expanded = viewModel?.isExpanded.value {
-            showHideButtons(show: expanded)
-        }
     }
     
     @objc private func followButtonPressed() {
@@ -67,7 +67,7 @@ class UserTableViewCell: UITableViewCell {
     
     private func bind() {
         viewModel?.isFollowing.bind { bool in
-            self.followButton.setTitle(bool ? "Unfollow" : "Follow", for: .normal)
+            self.setFollowButton(isFollowed: bool)
             
             self.favouriteImageView.image = bool ?  UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
         }
@@ -91,6 +91,10 @@ class UserTableViewCell: UITableViewCell {
     private func showHideButtons(show: Bool) {
         self.blockButton.isHidden = !show
         self.followButton.isHidden = !show
+    }
+    
+    private func setFollowButton(isFollowed: Bool) {
+        self.followButton.setTitle(isFollowed ? "Unfollow" : "Follow", for: .normal)
     }
     
 }
