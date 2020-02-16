@@ -22,6 +22,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var favouriteImageView: UIImageView!
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var blockButton: UIButton!
+    @IBOutlet weak var greyView: UIView!
     
     private var viewModel: CellViewModel?
     
@@ -31,6 +32,8 @@ class UserTableViewCell: UITableViewCell {
         userNameLabel.text = ""
         reputationLabel.text = ""
         favouriteImageView.image = nil
+        greyView.isHidden = true
+        self.isUserInteractionEnabled = true
     }
     
     
@@ -50,8 +53,7 @@ class UserTableViewCell: UITableViewCell {
         followButton.addTarget(self, action: #selector(followButtonPressed), for: .touchUpInside)
         blockButton.addTarget(self, action: #selector(blockButtonPressed), for: .touchUpInside)
         if let expanded = viewModel?.isExpanded.value {
-            followButton.isHidden = !expanded
-            blockButton.isHidden = !expanded
+            showHideButtons(show: expanded)
         }
     }
     
@@ -65,7 +67,7 @@ class UserTableViewCell: UITableViewCell {
     
     private func bind() {
         viewModel?.isFollowing.bind { bool in
-            self.followButton.setTitle(bool ? "Following" : "Follow", for: .normal)
+            self.followButton.setTitle(bool ? "Unfollow" : "Follow", for: .normal)
             
             self.favouriteImageView.image = bool ?  UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
         }
@@ -75,19 +77,20 @@ class UserTableViewCell: UITableViewCell {
         }
         
         viewModel?.isExpanded.bind { bool in
-            self.blockButton.isHidden = !bool
-            self.followButton.isHidden = !bool 
+            self.showHideButtons(show: bool)
         }
     }
     
     private func disableCell() {
-        self.followButton.isEnabled = false
-        self.blockButton.isEnabled = false
         self.isUserInteractionEnabled = false
-        self.userNameLabel.textColor = .gray
-        self.reputationLabel.textColor = .gray
         self.viewModel?.isExpanded.value = false
         self.delegate?.updateTableView()
+        self.greyView.isHidden = false
+    }
+    
+    private func showHideButtons(show: Bool) {
+        self.blockButton.isHidden = !show
+        self.followButton.isHidden = !show
     }
     
 }
