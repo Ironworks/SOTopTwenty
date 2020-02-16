@@ -9,6 +9,11 @@
 import UIKit
 import SOTopTwentyKit
 
+
+public protocol UserTableViewCellDelegate: class {
+    func updateTableView()
+}
+
 class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
@@ -19,6 +24,8 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var blockButton: UIButton!
     
     private var viewModel: CellViewModel?
+    
+    weak var delegate: UserTableViewCellDelegate?
     
     override func prepareForReuse() {
         userNameLabel.text = ""
@@ -32,6 +39,9 @@ class UserTableViewCell: UITableViewCell {
         userNameLabel.text = viewModel.userName.value
         reputationLabel.text = "\(viewModel.reputation.value)"
         favouriteImageView.image = viewModel.isFollowing.value ? UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
+        if viewModel.isBlocked.value {
+            self.disableCell()
+        }
         setupButtons()
         bind()
     }
@@ -61,12 +71,7 @@ class UserTableViewCell: UITableViewCell {
         }
         
         viewModel?.isBlocked.bind { bool in
-            self.blockButton.setTitle(bool ? "Blocked" : "Block", for: .normal)
-            self.followButton.isEnabled = false
-            self.blockButton.isEnabled = false
-            self.isUserInteractionEnabled = false
-            self.userNameLabel.textColor = bool ? .gray : .black
-            self.reputationLabel.textColor = bool ? .gray : .black
+            self.disableCell()
         }
         
         viewModel?.isExpanded.bind { bool in
@@ -75,6 +80,14 @@ class UserTableViewCell: UITableViewCell {
         }
     }
     
-
+    private func disableCell() {
+        self.followButton.isEnabled = false
+        self.blockButton.isEnabled = false
+        self.isUserInteractionEnabled = false
+        self.userNameLabel.textColor = .gray
+        self.reputationLabel.textColor = .gray
+        self.viewModel?.isExpanded.value = false
+        self.delegate?.updateTableView()
+    }
     
 }

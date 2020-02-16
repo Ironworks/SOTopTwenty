@@ -75,6 +75,7 @@ extension MainViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
         
         let cellModel = viewModel.users.value[indexPath.row]
+        cell.delegate = self
         cell.configure(viewModel: cellModel)
         if let url = URL(string: cellModel.profileImage.value) {
             imageClient.setImage(on: cell.profileImageView, fromURL: url, withPlaceholder: UIImage(named: "placeholder"))
@@ -101,4 +102,11 @@ extension MainViewController: UITableViewDelegate {
         return cellModel.isExpanded.value ? expandedCellHeight : cellHeight
     }
     
+}
+
+extension MainViewController: UserTableViewCellDelegate {
+    public func updateTableView() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
 }
