@@ -24,10 +24,10 @@ class MainViewControllerTest: XCTestCase {
         super.tearDown()
     }
     
-    func testCanCreateMainViewControllerWithViewModel() {
-        sut = MainViewController()
-//        XCTAssertNotNil(sut.viewModel)
-    }
+//    func testCanCreateMainViewControllerWithViewModel() {
+//        sut = MainViewController()
+////        XCTAssertNotNil(sut.viewModel)
+//    }
 
     
 }
