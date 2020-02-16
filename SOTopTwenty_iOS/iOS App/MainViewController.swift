@@ -14,6 +14,8 @@ public class MainViewController: NiblessViewController {
     
     var viewModel: MainViewModelProtocol
     private let tableView: UITableView
+    private let cellHeight = CGFloat(110)
+    private let expandedCellHeight = CGFloat(178)
     
     var imageClient: ImageService = ImageClient.shared
 
@@ -31,8 +33,7 @@ public class MainViewController: NiblessViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: Bundle(for: Self.self)), forCellReuseIdentifier: "UserTableViewCell")
-        tableView.estimatedRowHeight = 178
-        
+
         bind()
     }
     
@@ -74,6 +75,7 @@ extension MainViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
         
         let cellModel = viewModel.users.value[indexPath.row]
+        cell.delegate = self
         cell.configure(viewModel: cellModel)
         if let url = URL(string: cellModel.profileImage.value) {
             imageClient.setImage(on: cell.profileImageView, fromURL: url, withPlaceholder: UIImage(named: "placeholder"))
@@ -81,8 +83,30 @@ extension MainViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    
 }
 
 extension MainViewController: UITableViewDelegate {
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellModel = viewModel.users.value[indexPath.row]
+        cellModel.toggleIsExpanded()
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellModel = viewModel.users.value[indexPath.row]
+        return cellModel.isExpanded.value ? expandedCellHeight : cellHeight
+    }
+    
+}
+
+extension MainViewController: UserTableViewCellDelegate {
+    public func updateTableView() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
 }

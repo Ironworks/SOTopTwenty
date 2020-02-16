@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="178" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="SOTopTwenty_iOS" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="178" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="SOTopTwenty_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -63,24 +63,31 @@
                         </constraints>
                         <state key="normal" title="Block"/>
                     </button>
+                    <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-cJ-mgW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="LdE-cJ-mgW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Pg-rG-ksv"/>
                     <constraint firstAttribute="bottom" secondItem="E2O-fK-37W" secondAttribute="bottom" constant="11" id="6xW-zd-vJu"/>
+                    <constraint firstAttribute="bottom" secondItem="LdE-cJ-mgW" secondAttribute="bottom" id="Bdp-nF-uy8"/>
                     <constraint firstAttribute="bottom" secondItem="wZu-vC-a5K" secondAttribute="bottom" constant="11" id="Fia-Qj-tHP"/>
                     <constraint firstAttribute="trailing" secondItem="wZu-vC-a5K" secondAttribute="trailing" constant="16" id="FuQ-pE-kak"/>
                     <constraint firstAttribute="trailing" secondItem="pls-UG-gep" secondAttribute="trailing" constant="16" id="HhW-pg-mlA"/>
                     <constraint firstItem="BxG-Th-LFh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LCE-E7-H69"/>
                     <constraint firstItem="oWt-Ok-jZA" firstAttribute="top" secondItem="mzM-P1-EYX" secondAttribute="bottom" constant="8" id="Mbn-r1-CL3"/>
                     <constraint firstItem="mzM-P1-EYX" firstAttribute="leading" secondItem="BxG-Th-LFh" secondAttribute="trailing" constant="8" id="NjF-uA-X90"/>
+                    <constraint firstItem="LdE-cJ-mgW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rym-y0-NaC"/>
                     <constraint firstItem="E2O-fK-37W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Sdo-OG-iYU"/>
                     <constraint firstItem="oWt-Ok-jZA" firstAttribute="leading" secondItem="R4D-ZR-geh" secondAttribute="trailing" constant="7.5" id="dUa-8m-V0X"/>
                     <constraint firstItem="R4D-ZR-geh" firstAttribute="leading" secondItem="BxG-Th-LFh" secondAttribute="trailing" constant="8" id="gHg-Aj-Wg9"/>
                     <constraint firstItem="pls-UG-gep" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="iUg-6G-abz"/>
+                    <constraint firstAttribute="trailing" secondItem="LdE-cJ-mgW" secondAttribute="trailing" id="ih1-Ri-ebI"/>
                     <constraint firstItem="pls-UG-gep" firstAttribute="leading" secondItem="mzM-P1-EYX" secondAttribute="trailing" constant="8" id="jY7-Et-gmB"/>
                     <constraint firstItem="BxG-Th-LFh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="jza-nH-Lar"/>
                     <constraint firstItem="mzM-P1-EYX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="orC-wh-J3l"/>
                     <constraint firstItem="R4D-ZR-geh" firstAttribute="top" secondItem="mzM-P1-EYX" secondAttribute="bottom" constant="8" id="pkE-HG-2Jc"/>
-                    <constraint firstItem="E2O-fK-37W" firstAttribute="top" secondItem="BxG-Th-LFh" secondAttribute="bottom" constant="41" id="xUG-rn-JzW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -88,6 +95,7 @@
                 <outlet property="blockButton" destination="wZu-vC-a5K" id="s55-X3-viD"/>
                 <outlet property="favouriteImageView" destination="pls-UG-gep" id="vt4-gG-hfh"/>
                 <outlet property="followButton" destination="E2O-fK-37W" id="wse-x6-5YX"/>
+                <outlet property="greyView" destination="LdE-cJ-mgW" id="ShX-Jt-7a8"/>
                 <outlet property="profileImageView" destination="BxG-Th-LFh" id="ExA-p9-Kop"/>
                 <outlet property="reputationLabel" destination="oWt-Ok-jZA" id="0XP-gj-Obg"/>
                 <outlet property="userNameLabel" destination="mzM-P1-EYX" id="hpa-RR-JqU"/>

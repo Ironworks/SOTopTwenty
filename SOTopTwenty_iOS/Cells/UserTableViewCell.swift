@@ -9,6 +9,11 @@
 import UIKit
 import SOTopTwentyKit
 
+
+public protocol UserTableViewCellDelegate: class {
+    func updateTableView()
+}
+
 class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
@@ -17,25 +22,29 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var favouriteImageView: UIImageView!
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var blockButton: UIButton!
+    @IBOutlet weak var greyView: UIView!
     
     private var viewModel: CellViewModel?
     
+    weak var delegate: UserTableViewCellDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func prepareForReuse() {
+        userNameLabel.text = ""
+        reputationLabel.text = ""
+        favouriteImageView.image = nil
+        greyView.isHidden = true
+        self.isUserInteractionEnabled = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
     
     func configure(viewModel: CellViewModel) {
         self.viewModel = viewModel
         userNameLabel.text = viewModel.userName.value
         reputationLabel.text = "\(viewModel.reputation.value)"
+        favouriteImageView.image = viewModel.isFollowing.value ? UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
+        if viewModel.isBlocked.value {
+            self.disableCell()
+        }
         setupButtons()
         bind()
     }
@@ -43,6 +52,9 @@ class UserTableViewCell: UITableViewCell {
     private func setupButtons() {
         followButton.addTarget(self, action: #selector(followButtonPressed), for: .touchUpInside)
         blockButton.addTarget(self, action: #selector(blockButtonPressed), for: .touchUpInside)
+        if let expanded = viewModel?.isExpanded.value {
+            showHideButtons(show: expanded)
+        }
     }
     
     @objc private func followButtonPressed() {
@@ -55,21 +67,30 @@ class UserTableViewCell: UITableViewCell {
     
     private func bind() {
         viewModel?.isFollowing.bind { bool in
-            self.followButton.setTitle(bool ? "Following" : "Follow", for: .normal)
+            self.followButton.setTitle(bool ? "Unfollow" : "Follow", for: .normal)
             
             self.favouriteImageView.image = bool ?  UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
         }
         
         viewModel?.isBlocked.bind { bool in
-            self.blockButton.setTitle(bool ? "Blocked" : "Block", for: .normal)
-            self.followButton.isEnabled = false
-            self.blockButton.isEnabled = false
-            self.isUserInteractionEnabled = false
-            self.userNameLabel.textColor = bool ? .gray : .black
-            self.reputationLabel.textColor = bool ? .gray : .black
+            self.disableCell()
+        }
+        
+        viewModel?.isExpanded.bind { bool in
+            self.showHideButtons(show: bool)
         }
     }
     
-
+    private func disableCell() {
+        self.isUserInteractionEnabled = false
+        self.viewModel?.isExpanded.value = false
+        self.delegate?.updateTableView()
+        self.greyView.isHidden = false
+    }
+    
+    private func showHideButtons(show: Bool) {
+        self.blockButton.isHidden = !show
+        self.followButton.isHidden = !show
+    }
     
 }
