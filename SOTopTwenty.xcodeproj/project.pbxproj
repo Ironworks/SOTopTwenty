@@ -29,6 +29,7 @@
 		F0324F3923F8C98000AFA2CB /* CellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F3823F8C98000AFA2CB /* CellViewModelTests.swift */; };
 		F0324F3D23F8EE7200AFA2CB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F3B23F8EE7200AFA2CB /* UserTableViewCell.swift */; };
 		F0324F3E23F8EE7200AFA2CB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0324F3C23F8EE7200AFA2CB /* UserTableViewCell.xib */; };
+		F0324F4023F95AA000AFA2CB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0324F3F23F95AA000AFA2CB /* Media.xcassets */; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
@@ -156,6 +157,7 @@
 		F0324F3823F8C98000AFA2CB /* CellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelTests.swift; sourceTree = "<group>"; };
 		F0324F3B23F8EE7200AFA2CB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		F0324F3C23F8EE7200AFA2CB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		F0324F3F23F95AA000AFA2CB /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F061300B23F4C37100DD39B3 /* SOTopTwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOTopTwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061300E23F4C37100DD39B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F061301023F4C37100DD39B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			children = (
 				F061305D23F5AAC600DD39B3 /* SOTopTwenty_iOS.h */,
 				F061305E23F5AAC600DD39B3 /* Info.plist */,
+				F0324F3F23F95AA000AFA2CB /* Media.xcassets */,
 				F061307823F5BB6B00DD39B3 /* iOS App */,
 				F0324F3A23F8EE3800AFA2CB /* Cells */,
 			);
@@ -741,6 +744,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0324F4023F95AA000AFA2CB /* Media.xcassets in Resources */,
 				F0324F3E23F8EE7200AFA2CB /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

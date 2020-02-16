@@ -10,10 +10,10 @@ import Foundation
 
 public class CellViewModel {
         
-    var userName: Dynamic<String> = Dynamic("")
-    var reputation: Dynamic<Int> = Dynamic(0)
-    var isFollowing: Dynamic<Bool> = Dynamic(false)
-    var isBlocked: Dynamic<Bool> = Dynamic(false)
+    public var userName: Dynamic<String> = Dynamic("")
+    public var reputation: Dynamic<Int> = Dynamic(0)
+    public var isFollowing: Dynamic<Bool> = Dynamic(false)
+    public var isBlocked: Dynamic<Bool> = Dynamic(false)
     
     public init(user: User) {
         self.userName.value = user.userName

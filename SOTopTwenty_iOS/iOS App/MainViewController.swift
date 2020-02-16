@@ -14,8 +14,7 @@ public class MainViewController: NiblessViewController {
     
     var viewModel: MainViewModel
     private let tableView: UITableView
-    
-    
+
     public init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         tableView = UITableView()
@@ -29,6 +28,10 @@ public class MainViewController: NiblessViewController {
         configureUI()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "UserTableViewCell", bundle: Bundle(for: Self.self)), forCellReuseIdentifier: "UserTableViewCell")
+        tableView.estimatedRowHeight = 178
+        
+        bind()
     }
     
     public override func viewDidAppear(_ animated: Bool) {
@@ -44,6 +47,13 @@ public class MainViewController: NiblessViewController {
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
+    
+    private func bind() {
+        
+        viewModel.users.bind { _ in
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension MainViewController: UITableViewDataSource {
@@ -52,7 +62,10 @@ extension MainViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
+        
+        cell.configure(viewModel: viewModel.users.value[indexPath.row])
+        return cell
     }
 }
 
