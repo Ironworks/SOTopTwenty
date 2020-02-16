@@ -20,22 +20,18 @@ class UserTableViewCell: UITableViewCell {
     
     private var viewModel: CellViewModel?
     
+    override func prepareForReuse() {
+        userNameLabel.text = ""
+        reputationLabel.text = ""
+        favouriteImageView.image = nil
+    }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func configure(viewModel: CellViewModel) {
         self.viewModel = viewModel
         userNameLabel.text = viewModel.userName.value
         reputationLabel.text = "\(viewModel.reputation.value)"
+        favouriteImageView.image = viewModel.isFollowing.value ? UIImage(named: "favourite", in: Bundle(for: Self.self), with: nil) : nil
         setupButtons()
         bind()
     }
@@ -43,6 +39,10 @@ class UserTableViewCell: UITableViewCell {
     private func setupButtons() {
         followButton.addTarget(self, action: #selector(followButtonPressed), for: .touchUpInside)
         blockButton.addTarget(self, action: #selector(blockButtonPressed), for: .touchUpInside)
+        if let expanded = viewModel?.isExpanded.value {
+            followButton.isHidden = !expanded
+            blockButton.isHidden = !expanded
+        }
     }
     
     @objc private func followButtonPressed() {
@@ -67,6 +67,11 @@ class UserTableViewCell: UITableViewCell {
             self.isUserInteractionEnabled = false
             self.userNameLabel.textColor = bool ? .gray : .black
             self.reputationLabel.textColor = bool ? .gray : .black
+        }
+        
+        viewModel?.isExpanded.bind { bool in
+            self.blockButton.isHidden = !bool
+            self.followButton.isHidden = !bool 
         }
     }
     

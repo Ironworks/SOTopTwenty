@@ -57,6 +57,10 @@ class CellViewModelTests: XCTestCase {
         XCTAssertEqual(sut.isBlocked.value, false)
     }
     
+    func testIsExpandedInitiallySetToFalse() {
+        XCTAssertEqual(sut.isExpanded.value, false)
+    }
+    
     func testGiveUserNameChangesCellBindsToUserName() {
         givenMockCell()
         sut.userName.value = "updated name"
@@ -84,6 +88,13 @@ class CellViewModelTests: XCTestCase {
         XCTAssertEqual(mockCell.isBlocked, sut.isBlocked.value)
         XCTAssertTrue(mockCell.bindsToIsBlocked)
     }
+    
+    func testWhenIsExpandedChangedBindsToIsExpanded() {
+        givenMockCell()
+        sut.toggleIsExpanded()
+        XCTAssertEqual(mockCell.isExpanded, sut.isExpanded.value)
+        XCTAssertTrue(mockCell.bindsToIsExpanded)
+    }
 
 }
 
@@ -95,12 +106,14 @@ class MockCell {
     var reputation: Int?
     var isFollowing: Bool?
     var isBlocked: Bool?
+    var isExpanded: Bool?
     
 
     var bindsToUserName = false
     var bindsToReputation = false
     var bindsToIsFollowing = false
     var bindsToIsBlocked = false
+    var bindsToIsExpanded = false
     
     init(viewModel: CellViewModel) {
         self.viewModel = viewModel
@@ -126,6 +139,11 @@ class MockCell {
         viewModel.isBlocked.bind {
             self.isBlocked = $0
             self.bindsToIsBlocked = true
+        }
+        
+        viewModel.isExpanded.bind {
+            self.isExpanded = $0
+            self.bindsToIsExpanded = true
         }
     }
 }

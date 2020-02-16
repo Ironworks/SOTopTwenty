@@ -15,6 +15,7 @@ public class CellViewModel {
     public var profileImage: Dynamic<String> = Dynamic("")
     public var isFollowing: Dynamic<Bool> = Dynamic(false)
     public var isBlocked: Dynamic<Bool> = Dynamic(false)
+    public var isExpanded: Dynamic<Bool> = Dynamic(false)
     
     public init(user: User) {
         self.userName.value = user.userName
@@ -28,6 +29,10 @@ public class CellViewModel {
     
     public func toggleIsBlocked() {
         isBlocked.value = !isBlocked.value
+    }
+    
+    public func toggleIsExpanded() {
+        isExpanded.value = !isExpanded.value
     }
     
 }
