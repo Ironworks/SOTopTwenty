@@ -38,6 +38,8 @@
 		F0324F5523F99ECA00AFA2CB /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5423F99ECA00AFA2CB /* MockSession.swift */; };
 		F0324F5723F99F0300AFA2CB /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5623F99F0300AFA2CB /* MockURLSessionDataTask.swift */; };
 		F0324F5923F9A91900AFA2CB /* MockMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5823F9A91900AFA2CB /* MockMainViewModel.swift */; };
+		F0324F7523F9B8A200AFA2CB /* SOTopTwentyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; };
+		F0324F7623F9B8A200AFA2CB /* SOTopTwentyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
@@ -68,6 +70,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F061308E23F5BE3A00DD39B3;
 			remoteInfo = SOTopTwentyUIKit;
+		};
+		F0324F7723F9B8A200AFA2CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F061300323F4C37100DD39B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F061303823F4C54100DD39B3;
+			remoteInfo = SOTopTwentyKit;
 		};
 		F061304323F4C54200DD39B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -128,6 +137,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F0324F7923F9B8A200AFA2CB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F0324F7623F9B8A200AFA2CB /* SOTopTwentyKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F061303323F4C51800DD39B3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0324F7523F9B8A200AFA2CB /* SOTopTwentyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,10 +658,12 @@
 				F061305723F5AAC600DD39B3 /* Sources */,
 				F061305823F5AAC600DD39B3 /* Frameworks */,
 				F061305923F5AAC600DD39B3 /* Resources */,
+				F0324F7923F9B8A200AFA2CB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F0324F7823F9B8A200AFA2CB /* PBXTargetDependency */,
 			);
 			name = SOTopTwenty_iOS;
 			productName = SOTopTwenty_iOS;
@@ -915,6 +938,11 @@
 			isa = PBXTargetDependency;
 			target = F061308E23F5BE3A00DD39B3 /* SOTopTwentyUIKit */;
 			targetProxy = F0324F2423F84F0900AFA2CB /* PBXContainerItemProxy */;
+		};
+		F0324F7823F9B8A200AFA2CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F061303823F4C54100DD39B3 /* SOTopTwentyKit */;
+			targetProxy = F0324F7723F9B8A200AFA2CB /* PBXContainerItemProxy */;
 		};
 		F061304423F4C54200DD39B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1226,6 +1254,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1240,6 +1269,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ironworksMediaLimited.SOTopTwenty-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1255,6 +1285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1269,6 +1300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ironworksMediaLimited.SOTopTwenty-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1323,6 +1355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1337,6 +1370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.SOTopTwentyUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1352,6 +1386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1366,6 +1401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.SOTopTwentyUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
