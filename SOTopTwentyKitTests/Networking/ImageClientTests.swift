@@ -24,11 +24,13 @@ class ImageClientTests: XCTestCase {
     var recievedImage: UIImage!
     var expectedImage: UIImage!
     var expectedError: NSError!
+    var imageView: UIImageView!
     
     override func setUp() {
         super.setUp()
         mockSession = MockURLSession()
         url = URL(string: "https://example.com/image")!
+        imageView = UIImageView()
         sut = ImageClient(responseQueue: nil, session: mockSession)
     }
     
@@ -41,6 +43,7 @@ class ImageClientTests: XCTestCase {
         recievedImage = nil
         expectedImage = nil
         expectedError = nil
+        imageView = nil
         super.tearDown()
     }
     
@@ -68,6 +71,13 @@ class ImageClientTests: XCTestCase {
                 recievedDataTask.completionHandler(nil, nil, error)
             }
         }
+    }
+    
+    func whenSetImage() {
+        givenExpectedImage()
+        sut.setImage(on: imageView, fromURL: url, withPlaceholder: nil)
+        recievedDataTask = sut.cachedTaskForImageView[imageView] as? MockURLSessionDataTask
+        recievedDataTask.completionHandler(expectedImage.pngData(), nil, nil)
     }
     
     func verifyDownloadImageDispatched(image: UIImage? = nil, error: Error? = nil, line: UInt = #line) {
@@ -170,6 +180,87 @@ class ImageClientTests: XCTestCase {
         givenExpectedError()
         
         verifyDownloadImageDispatched(error: expectedError)
+    }
+    
+    func testDownloadImageGivenImageCachesImage() {
+        givenExpectedImage()
         
+        whenDownloadImage(image: expectedImage)
+        
+        XCTAssertEqual(sut.cachedImageForURL[url]?.pngData(), expectedImage.pngData())
+    }
+    
+    func testDownloadImageGivenCachedImageReturnsNilDataTask() {
+        
+        givenExpectedImage()
+        
+        whenDownloadImage(image: expectedImage)
+        whenDownloadImage(image: expectedImage)
+        
+        XCTAssertNil(recievedDataTask)
+    }
+    
+    func testDownloadImageGivenCacheImageCallsCompletionWithImage() {
+        
+        givenExpectedImage()
+        
+        whenDownloadImage(image: expectedImage)
+        recievedImage = nil
+        
+        whenDownloadImage(image: expectedImage)
+        
+        XCTAssertEqual(recievedImage.pngData(), expectedImage.pngData())
+    }
+    
+    func testSetImageOnImageViewCancelsExistingDataTask() {
+        
+        let dataTask = MockURLSessionDataTask(completionHandler: { _,_,_ in }, url: url, queue: nil)
+        sut.cachedTaskForImageView[imageView] = dataTask
+        
+        sut.setImage(on: imageView, fromURL: url, withPlaceholder: nil)
+        
+        XCTAssertTrue(dataTask.calledCancel)
+    }
+    
+    func testSetImageOnImageViewSetsPlaceholderOnImageView() {
+        
+        givenExpectedImage()
+  
+        sut.setImage(on: imageView, fromURL: url, withPlaceholder: expectedImage)
+        
+        XCTAssertEqual(imageView.image?.pngData(), expectedImage.pngData())
+    }
+    
+    func testSetImageOnImageViewCachesDownloadTask() {
+        sut.setImage(on: imageView, fromURL: url, withPlaceholder: nil)
+        
+        recievedDataTask = sut.cachedTaskForImageView[imageView] as? MockURLSessionDataTask
+        
+        XCTAssertEqual(recievedDataTask?.url, url)
+    }
+    
+    func testSetImageOnImageViewOnCompletionRemoveCachedTask() {
+ 
+        whenSetImage()
+        
+        XCTAssertNil(sut.cachedTaskForImageView[imageView])
+    }
+    
+    func testSetImageOnImageViewOnCompletionSetsImage() {
+
+        whenSetImage()
+        
+        XCTAssertEqual(imageView.image?.pngData(), expectedImage.pngData())
+    }
+    
+    func testSetImageOnImageViewGivenErrorDoesntSetImage() {
+        givenExpectedImage()
+        givenExpectedError()
+        
+        sut.setImage(on: imageView, fromURL: url, withPlaceholder: expectedImage)
+        recievedDataTask = sut.cachedTaskForImageView[imageView] as? MockURLSessionDataTask
+        recievedDataTask.completionHandler(nil, nil, expectedError)
+        
+        XCTAssertEqual(imageView.image?.pngData(), expectedImage.pngData())
     }
 }
