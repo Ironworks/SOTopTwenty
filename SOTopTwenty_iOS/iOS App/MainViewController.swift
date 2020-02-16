@@ -55,6 +55,13 @@ public class MainViewController: NiblessViewController {
         viewModel.users.bind { _ in
             self.tableView.reloadData()
         }
+        
+        viewModel.error.bind { _ in
+            let alert = UIAlertController(title: "Network Error", message: "Unable to retrieve data, please check your connection", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 

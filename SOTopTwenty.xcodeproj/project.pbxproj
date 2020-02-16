@@ -40,6 +40,7 @@
 		F0324F5923F9A91900AFA2CB /* MockMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5823F9A91900AFA2CB /* MockMainViewModel.swift */; };
 		F0324F7523F9B8A200AFA2CB /* SOTopTwentyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; };
 		F0324F7623F9B8A200AFA2CB /* SOTopTwentyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0324F7B23F9BEED00AFA2CB /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F7A23F9BEED00AFA2CB /* InternetConnectionManager.swift */; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
@@ -193,6 +194,7 @@
 		F0324F5423F99ECA00AFA2CB /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		F0324F5623F99F0300AFA2CB /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		F0324F5823F9A91900AFA2CB /* MockMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainViewModel.swift; sourceTree = "<group>"; };
+		F0324F7A23F9BEED00AFA2CB /* InternetConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionManager.swift; sourceTree = "<group>"; };
 		F061300B23F4C37100DD39B3 /* SOTopTwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOTopTwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061300E23F4C37100DD39B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F061301023F4C37100DD39B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				F0324F0923F8305100AFA2CB /* StackOverflowClient.swift */,
+				F0324F7A23F9BEED00AFA2CB /* InternetConnectionManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0324F7B23F9BEED00AFA2CB /* InternetConnectionManager.swift in Sources */,
 				F0324F0D23F8328600AFA2CB /* Users.swift in Sources */,
 				F0324F3523F8AD1300AFA2CB /* Dynamic.swift in Sources */,
 				F0324F1E23F8459D00AFA2CB /* Items.swift in Sources */,

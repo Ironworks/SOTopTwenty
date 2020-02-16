@@ -28,6 +28,15 @@ public class MainViewModel: MainViewModelProtocol {
     }
     
     public func retrieveUsers() {
+        
+        guard InternetConnectionManager.isConnectedToNetwork() else {
+            
+            let error = NSError(domain: "com.SOTopTwenty", code: 99, userInfo: nil)
+            self.error.value = error
+            return
+        }
+        
+        
         _ = networkService.getUsers { [weak self] items, error in
             
             guard let self = self else { return }
