@@ -17,7 +17,8 @@ I did decide to use a xib file for the TableView Cells, as I find it quicker to 
 
 ## Constraints
 
-Due to time constraints I didn't write as many tests around the Viewcontrollers as I would have liked to. In that regard I conxentrated more on completing the functionality. 
+Due to time constraints I didn't write as many tests around the Viewcontrollers and tableViewCells as I would have liked to. In that regard I concentrated more on completing the functionality. 
+
 
 
 
