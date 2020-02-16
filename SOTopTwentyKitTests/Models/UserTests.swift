@@ -44,5 +44,15 @@ class UserTests: XCTestCase, DecodableTestCase {
     func testDecodableSetsReputation() throws {
         try XCTAssertEqualToAny(sut.reputation, dictionary["reputation"])
     }
+    
+    func testCanCreateAUserManually() {
+        sut = User(profileImage: "http://example.com",
+                        userName: "name",
+                        reputation: 2)
+        
+        XCTAssertEqual(sut.profileImage, "http://example.com")
+        XCTAssertEqual(sut.userName, "name")
+        XCTAssertEqual(sut.reputation, 2)
+    }
 
 }

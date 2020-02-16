@@ -18,6 +18,12 @@ class User: Decodable {
         case userName = "display_name"
         case reputation
     }
+    
+    init(profileImage: String, userName: String, reputation: Int) {
+        self.profileImage = profileImage
+        self.userName = userName
+        self.reputation = reputation
+    }
 }
 
 extension User: Equatable {
