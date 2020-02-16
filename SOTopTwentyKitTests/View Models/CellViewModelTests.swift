@@ -28,7 +28,6 @@ class CellViewModelTests: XCTestCase {
     func givenMockCell() {
         mockCell = MockCell(viewModel: sut)
         mockCell.bind()
-        sut.user = user
     }
     
     func whenSUTSetFromUser(profileImage: String = "http://example.com",
@@ -38,20 +37,15 @@ class CellViewModelTests: XCTestCase {
         user = User(profileImage: profileImage,
                         userName: userName,
                         reputation: reputation)
-        sut = CellViewModel()
-        sut.user = user
-    }
-    
+        sut = CellViewModel(user: user)
 
-    func testSetUserSetsUser() {
-        XCTAssertEqual(sut.user, user)
     }
-    
-    func testSetUserSetsName() {
+        
+    func testInitSetsName() {
         XCTAssertEqual(sut.userName.value, "name")
     }
     
-    func testSetUserSetsReputation() {
+    func testInitSetsReputation() {
         XCTAssertEqual(sut.reputation.value, 99)
     }
     
@@ -63,14 +57,16 @@ class CellViewModelTests: XCTestCase {
         XCTAssertEqual(sut.isBlocked.value, false)
     }
     
-    func testCellBindsToUserName() {
+    func testGiveUserNameChangesCellBindsToUserName() {
         givenMockCell()
+        sut.userName.value = "updated name"
         XCTAssertEqual(mockCell.userName, sut.userName.value)
         XCTAssertTrue(mockCell.bindsToUserName)
     }
     
-    func testCellBindsToReputation() {
+    func testGivenReputationChangesCellBindsToReputation() {
         givenMockCell()
+        sut.reputation.value = 2000
         XCTAssertEqual(mockCell.reputation, sut.reputation.value)
         XCTAssertTrue(mockCell.bindsToReputation)
     }

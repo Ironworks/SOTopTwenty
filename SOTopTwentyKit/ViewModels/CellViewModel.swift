@@ -9,20 +9,16 @@
 import Foundation
 
 class CellViewModel {
-    
-    var user: User? {
-        didSet {
-            guard let user = user else { return }
-            self.userName.value = user.userName
-            self.reputation.value = user.reputation
-        }
-    }
-    
+        
     var userName: Dynamic<String> = Dynamic("")
     var reputation: Dynamic<Int> = Dynamic(0)
     var isFollowing: Dynamic<Bool> = Dynamic(false)
     var isBlocked: Dynamic<Bool> = Dynamic(false)
     
+    init(user: User) {
+        self.userName.value = user.userName
+        self.reputation.value = user.reputation
+    }
     
     func toggleIsFollowing() {
         isFollowing.value = !isFollowing.value

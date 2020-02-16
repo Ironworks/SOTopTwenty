@@ -10,7 +10,7 @@ import Foundation
 
 class MainViewModel {
     let networkService: StackOverflowService
-    var users: Dynamic<[User]> = Dynamic([User]())
+    var users: Dynamic<[CellViewModel]> = Dynamic([CellViewModel]())
     var error: Dynamic<Error> = Dynamic(NSError())
     
     
@@ -19,13 +19,15 @@ class MainViewModel {
     }
     
     func retrieveUsers() {
-        _ = networkService.getUsers { items, error in
+        _ = networkService.getUsers { [weak self] items, error in
+            
+            guard let self = self else { return }
             guard let users = items?.items else {
                 guard let error = error else { return }
                 self.error.value = error
                 return
             }
-            self.users.value = users
+            self.users.value = users.map { CellViewModel(user: $0) }
         }
     }
 }
