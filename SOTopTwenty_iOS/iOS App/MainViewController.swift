@@ -12,10 +12,12 @@ import SOTopTwentyUIKit
 
 public class MainViewController: NiblessViewController {
     
-    var viewModel: MainViewModel
+    var viewModel: MainViewModelProtocol
     private let tableView: UITableView
+    
+    var imageClient: ImageService = ImageClient.shared
 
-    public init(viewModel: MainViewModel) {
+    public init(viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
         tableView = UITableView()
         super.init()
@@ -64,7 +66,12 @@ extension MainViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
         
-        cell.configure(viewModel: viewModel.users.value[indexPath.row])
+        let cellModel = viewModel.users.value[indexPath.row]
+        cell.configure(viewModel: cellModel)
+        if let url = URL(string: cellModel.profileImage.value) {
+            imageClient.setImage(on: cell.profileImageView, fromURL: url, withPlaceholder: UIImage(named: "placeholder"))
+        }
+        
         return cell
     }
 }

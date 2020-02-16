@@ -6,8 +6,8 @@
 //  Copyright © 2020 IronworksMediaLimited. All rights reserved.
 //
 
-@testable import SOTopTwentyKit
 @testable import SOTopTwenty_iOS
+@testable import SOTopTwentyKit
 
 import XCTest
 

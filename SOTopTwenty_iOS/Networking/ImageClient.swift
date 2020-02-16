@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol ImageService {
+public protocol ImageService {
     func downloadImage(fromURL url: URL, completion: @escaping (UIImage?, Error?) -> Void) -> URLSessionDataTask?
     func setImage(on imageView: UIImageView, fromURL url: URL, withPlaceholder placeholder: UIImage?)
 }
 
-class ImageClient {
+public class ImageClient {
     
-    static let shared = ImageClient(responseQueue: .main,
+    public static let shared = ImageClient(responseQueue: .main,
                                     session: .shared)
     
     var cachedImageForURL: [URL: UIImage]
@@ -24,7 +24,7 @@ class ImageClient {
     let responseQueue: DispatchQueue?
     let session: URLSession
     
-    init(responseQueue: DispatchQueue?, session: URLSession) {
+    public init(responseQueue: DispatchQueue?, session: URLSession) {
         self.cachedImageForURL = [:]
         self.cachedTaskForImageView = [:]
         
@@ -36,7 +36,7 @@ class ImageClient {
 
 extension ImageClient: ImageService {
     
-    func downloadImage(fromURL url: URL, completion: @escaping (UIImage?, Error?) -> Void) -> URLSessionDataTask? {
+    public func downloadImage(fromURL url: URL, completion: @escaping (UIImage?, Error?) -> Void) -> URLSessionDataTask? {
         
         if let image = cachedImageForURL[url] {
             completion(image, nil)
@@ -72,7 +72,7 @@ extension ImageClient: ImageService {
         }
     }
     
-    func setImage(on imageView: UIImageView, fromURL url: URL, withPlaceholder placeholder: UIImage?) {
+    public func setImage(on imageView: UIImageView, fromURL url: URL, withPlaceholder placeholder: UIImage?) {
         cachedTaskForImageView[imageView]?.cancel()
         imageView.image = placeholder
         cachedTaskForImageView[imageView] = downloadImage(fromURL: url) { [weak self] image, error in

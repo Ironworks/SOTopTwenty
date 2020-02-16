@@ -30,16 +30,19 @@
 		F0324F3D23F8EE7200AFA2CB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F3B23F8EE7200AFA2CB /* UserTableViewCell.swift */; };
 		F0324F3E23F8EE7200AFA2CB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0324F3C23F8EE7200AFA2CB /* UserTableViewCell.xib */; };
 		F0324F4023F95AA000AFA2CB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0324F3F23F95AA000AFA2CB /* Media.xcassets */; };
-		F0324F4223F9614900AFA2CB /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4123F9614900AFA2CB /* ImageClient.swift */; };
-		F0324F4423F962D700AFA2CB /* ImageClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4323F962D700AFA2CB /* ImageClientTests.swift */; };
 		F0324F4723F9650700AFA2CB /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4623F9650700AFA2CB /* MockSession.swift */; };
 		F0324F4923F9652900AFA2CB /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4823F9652900AFA2CB /* MockURLSessionDataTask.swift */; };
+		F0324F5023F99CC000AFA2CB /* MockImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4A23F9939C00AFA2CB /* MockImageService.swift */; };
+		F0324F5223F99CCC00AFA2CB /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4123F9614900AFA2CB /* ImageClient.swift */; };
+		F0324F5323F99D3B00AFA2CB /* ImageClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F4323F962D700AFA2CB /* ImageClientTests.swift */; };
+		F0324F5523F99ECA00AFA2CB /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5423F99ECA00AFA2CB /* MockSession.swift */; };
+		F0324F5723F99F0300AFA2CB /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5623F99F0300AFA2CB /* MockURLSessionDataTask.swift */; };
+		F0324F5923F9A91900AFA2CB /* MockMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0324F5823F9A91900AFA2CB /* MockMainViewModel.swift */; };
 		F061300F23F4C37100DD39B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061300E23F4C37100DD39B3 /* AppDelegate.swift */; };
 		F061301123F4C37100DD39B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061301023F4C37100DD39B3 /* SceneDelegate.swift */; };
 		F061301823F4C37700DD39B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F061301723F4C37700DD39B3 /* Assets.xcassets */; };
 		F061301B23F4C37700DD39B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F061301923F4C37700DD39B3 /* LaunchScreen.storyboard */; };
 		F061304223F4C54200DD39B3 /* SOTopTwentyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; };
-		F061304923F4C54200DD39B3 /* SOTopTwentyKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061304823F4C54200DD39B3 /* SOTopTwentyKitTests.swift */; };
 		F061304B23F4C54200DD39B3 /* SOTopTwentyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F061303B23F4C54100DD39B3 /* SOTopTwentyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F061304E23F4C54200DD39B3 /* SOTopTwentyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; };
 		F061304F23F4C54200DD39B3 /* SOTopTwentyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F061303923F4C54100DD39B3 /* SOTopTwentyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -166,6 +169,10 @@
 		F0324F4323F962D700AFA2CB /* ImageClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClientTests.swift; sourceTree = "<group>"; };
 		F0324F4623F9650700AFA2CB /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		F0324F4823F9652900AFA2CB /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		F0324F4A23F9939C00AFA2CB /* MockImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageService.swift; sourceTree = "<group>"; };
+		F0324F5423F99ECA00AFA2CB /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
+		F0324F5623F99F0300AFA2CB /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		F0324F5823F9A91900AFA2CB /* MockMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainViewModel.swift; sourceTree = "<group>"; };
 		F061300B23F4C37100DD39B3 /* SOTopTwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOTopTwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061300E23F4C37100DD39B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F061301023F4C37100DD39B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,7 +183,6 @@
 		F061303B23F4C54100DD39B3 /* SOTopTwentyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOTopTwentyKit.h; sourceTree = "<group>"; };
 		F061303C23F4C54100DD39B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F061304123F4C54200DD39B3 /* SOTopTwentyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOTopTwentyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F061304823F4C54200DD39B3 /* SOTopTwentyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOTopTwentyKitTests.swift; sourceTree = "<group>"; };
 		F061304A23F4C54200DD39B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F061305B23F5AAC600DD39B3 /* SOTopTwenty_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOTopTwenty_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F061305D23F5AAC600DD39B3 /* SOTopTwenty_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOTopTwenty_iOS.h; sourceTree = "<group>"; };
@@ -260,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				F0324F0623F82F3A00AFA2CB /* StackOverflowClientTests.swift */,
-				F0324F4323F962D700AFA2CB /* ImageClientTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -277,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				F0324F0923F8305100AFA2CB /* StackOverflowClient.swift */,
-				F0324F4123F9614900AFA2CB /* ImageClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -378,6 +382,33 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		F0324F4C23F99B9600AFA2CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F4123F9614900AFA2CB /* ImageClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F0324F4D23F99BC500AFA2CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F4323F962D700AFA2CB /* ImageClientTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F0324F4E23F99BE800AFA2CB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F0324F4A23F9939C00AFA2CB /* MockImageService.swift */,
+				F0324F5423F99ECA00AFA2CB /* MockSession.swift */,
+				F0324F5623F99F0300AFA2CB /* MockURLSessionDataTask.swift */,
+				F0324F5823F9A91900AFA2CB /* MockMainViewModel.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F061300223F4C37100DD39B3 = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +465,6 @@
 		F061304723F4C54200DD39B3 /* SOTopTwentyKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				F061304823F4C54200DD39B3 /* SOTopTwentyKitTests.swift */,
 				F061304A23F4C54200DD39B3 /* Info.plist */,
 				F0324F0223F82E2900AFA2CB /* Networking */,
 				F0324F0E23F8334100AFA2CB /* Models */,
@@ -456,6 +486,7 @@
 				F0324F3F23F95AA000AFA2CB /* Media.xcassets */,
 				F061307823F5BB6B00DD39B3 /* iOS App */,
 				F0324F3A23F8EE3800AFA2CB /* Cells */,
+				F0324F4C23F99B9600AFA2CB /* Networking */,
 			);
 			path = SOTopTwenty_iOS;
 			sourceTree = "<group>";
@@ -466,6 +497,8 @@
 				F061306A23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift */,
 				F061306C23F5AAC700DD39B3 /* Info.plist */,
 				F0324F2B23F881BD00AFA2CB /* Controllers */,
+				F0324F4D23F99BC500AFA2CB /* Networking */,
+				F0324F4E23F99BE800AFA2CB /* Mocks */,
 			);
 			path = SOTopTwenty_iOSTests;
 			sourceTree = "<group>";
@@ -812,7 +845,6 @@
 				F0324F0A23F8305100AFA2CB /* StackOverflowClient.swift in Sources */,
 				F0324F3723F8C96300AFA2CB /* CellViewModel.swift in Sources */,
 				F0324F3023F8961D00AFA2CB /* MainViewModel.swift in Sources */,
-				F0324F4223F9614900AFA2CB /* ImageClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,7 +852,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0324F4423F962D700AFA2CB /* ImageClientTests.swift in Sources */,
 				F0324F1023F8336400AFA2CB /* UserTests.swift in Sources */,
 				F0324F1A23F83FAE00AFA2CB /* XCTAssertEqualToAny.swift in Sources */,
 				F0324F1C23F8453100AFA2CB /* ItemsTests.swift in Sources */,
@@ -828,7 +859,6 @@
 				F0324F3923F8C98000AFA2CB /* CellViewModelTests.swift in Sources */,
 				F0324F1423F8367200AFA2CB /* DecodableTestCase.swift in Sources */,
 				F0324F0723F82F3A00AFA2CB /* StackOverflowClientTests.swift in Sources */,
-				F061304923F4C54200DD39B3 /* SOTopTwentyKitTests.swift in Sources */,
 				F0324F4923F9652900AFA2CB /* MockURLSessionDataTask.swift in Sources */,
 				F0324F0523F82EA700AFA2CB /* Data+JSONFile.swift in Sources */,
 				F0324F3323F8964E00AFA2CB /* MainViewModelTests.swift in Sources */,
@@ -841,6 +871,7 @@
 			files = (
 				F06130AD23F5C24600DD39B3 /* MainViewController.swift in Sources */,
 				F0324F3D23F8EE7200AFA2CB /* UserTableViewCell.swift in Sources */,
+				F0324F5223F99CCC00AFA2CB /* ImageClient.swift in Sources */,
 				F06130AF23F5C28300DD39B3 /* SOTopTwentyAppDependencyContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,7 +881,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F061306B23F5AAC700DD39B3 /* SOTopTwenty_iOSTests.swift in Sources */,
+				F0324F5523F99ECA00AFA2CB /* MockSession.swift in Sources */,
 				F0324F2D23F881D900AFA2CB /* MainViewControllerTest.swift in Sources */,
+				F0324F5723F99F0300AFA2CB /* MockURLSessionDataTask.swift in Sources */,
+				F0324F5923F9A91900AFA2CB /* MockMainViewModel.swift in Sources */,
+				F0324F5323F99D3B00AFA2CB /* ImageClientTests.swift in Sources */,
+				F0324F5023F99CC000AFA2CB /* MockImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

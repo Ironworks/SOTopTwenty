@@ -12,12 +12,14 @@ public class CellViewModel {
         
     public var userName: Dynamic<String> = Dynamic("")
     public var reputation: Dynamic<Int> = Dynamic(0)
+    public var profileImage: Dynamic<String> = Dynamic("")
     public var isFollowing: Dynamic<Bool> = Dynamic(false)
     public var isBlocked: Dynamic<Bool> = Dynamic(false)
     
     public init(user: User) {
         self.userName.value = user.userName
         self.reputation.value = user.reputation
+        self.profileImage.value = user.profileImage
     }
     
     public func toggleIsFollowing() {

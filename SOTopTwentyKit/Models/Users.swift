@@ -19,7 +19,7 @@ public class User: Decodable {
         case reputation
     }
     
-    init(profileImage: String, userName: String, reputation: Int) {
+    public init(profileImage: String, userName: String, reputation: Int) {
         self.profileImage = profileImage
         self.userName = userName
         self.reputation = reputation

@@ -9,5 +9,9 @@
 import Foundation
 
 public struct Items: Decodable, Equatable {
-    let items: [User]
+    public let items: [User]
+    
+    public init(items: [User]) {
+        self.items = items
+    }
 }
